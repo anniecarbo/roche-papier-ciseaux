@@ -12,7 +12,9 @@ function getComputerChoice(arr) {
     indexValue = Math.floor(value); // Arrondir le nombre choisi vers le bas (pas de valeur décimale)
     return arr[indexValue];
 }
-
+//Garder le score test
+let playerScore = 0
+let computerScore = 0
 
 
 
@@ -24,39 +26,54 @@ function playRound(playerChoice, computerSelection) {
     if (playerChoice === computerSelection) {
         return ("Tie");
     } else if (playerChoice === "rock" && computerSelection === "paper" ) {
-        return ('Paper beats rock, you lose!');
+        computerScore = computerScore + 0.5;
+        return 'Paper beats rock, you lose!';  
+    
     } else if (playerChoice === "rock" && computerSelection === "scissors" ) {
-        return ('Rock beats scissors, you win!');
+        playerScore = playerScore + 0.5;
+        return 'Rock beats scissors, you win!'; 
+    
     } else if (playerChoice === "paper" && computerSelection === "scissors" ) {
-        return ('Scissors beat paper, you lose!');
+        computerScore = computerScore + 0.5;
+        return 'Scissors beat paper, you lose!'; 
+        
     } else if (playerChoice === "paper" && computerSelection === "rock" ) {
-        return ('Paper beats rock, you win!');
-    } else if (playerChoice === "scissors" && computerSelection === "paper" ) {
-        return ('Scissors beats paper, you win!');
+        playerScore = playerScore + 0.5;
+        return 'Paper beats rock, you win!'; 
+   
+     } else if (playerChoice === "scissors" && computerSelection === "paper" ) {
+        playerScore = playerScore + 0.5;
+        return 'Scissors beats paper, you win!'; 
+    
     } else if (playerChoice === "scissors" && computerSelection === "rock" ) {
-        return ('Rock beats scissors, you lose!'); }
+        computerScore = computerScore + 0.5;
+        return 'Rock beats scissors, you lose!';
+        }
+        
 }
 
 
         
-    
+
 //Fonction test pour ajouter d'autre rondes
 
 function game() {
-    for (let i = 0; i < 5; i++)
-    if (i < 6) {
+    for (let i = 0; i < 6; i++)
+    if (i < 5) {
         let playerPrompt = prompt("Rock, paper or scissors?");
         let playerChoice = playerPrompt.toLowerCase();
-        getComputerChoice(myChoices);
+        let computerSelection = getComputerChoice(myChoices);
         playRound(playerChoice, computerSelection);
         console.log(playerChoice);
         console.log(computerSelection);
         console.log(playRound(playerChoice, computerSelection));
+        console.log('Player Score = ' + playerScore + ' ' + 'Computer Score = ' + computerScore);
 
-
-    }  else if (i > 6) {
+    }  else if (i === 6) {
         console.log("fin du jeu")
     } 
 }
 
 game();
+
+
