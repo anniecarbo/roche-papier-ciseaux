@@ -13,17 +13,11 @@ function getComputerChoice(arr) {
     return arr[indexValue];
 }
 
-//Fonction test pour jouer une ronde complete
 
-
-//Ici la fenetre pour que le joueur fasse son choix
-let playerPrompt = prompt("Rock, paper or scissors?");
-
-let playerChoice = playerPrompt.toLowerCase();
 
 
 //Ici pour transformer les deux choix en constante
-const computerSelection = getComputerChoice(myChoices);
+let computerSelection = getComputerChoice(myChoices);
 
 //Ici pour determiner le gagnant de la ronde
 function playRound(playerChoice, computerSelection) {
@@ -43,9 +37,26 @@ function playRound(playerChoice, computerSelection) {
         return ('Rock beats scissors, you lose!'); }
 }
 
-playRound(playerChoice, computerSelection);
+
         
     
+//Fonction test pour ajouter d'autre rondes
+
+function game() {
+    for (let i = 0; i < 5; i++)
+    if (i < 6) {
+        let playerPrompt = prompt("Rock, paper or scissors?");
+        let playerChoice = playerPrompt.toLowerCase();
+        getComputerChoice(myChoices);
+        playRound(playerChoice, computerSelection);
+        console.log(playerChoice);
+        console.log(computerSelection);
+        console.log(playRound(playerChoice, computerSelection));
 
 
- 
+    }  else if (i > 6) {
+        console.log("fin du jeu")
+    } 
+}
+
+game();
