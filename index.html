@@ -5,10 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet"> 
 
     <title>Roche Papier Ciseaux</title>
 </head>
 <body>
+     <div class="content"> 
+        <h1>ROCK PAPER <br>SCISSOR GAME</h1>
+        <h3>Choose your weapon</h3>
+
+        <div class="choices">
+            <button id="rock"></button>
+            <button id="paper"></button>
+            <button id="scissors"></button>
+        </div>
+        <div class="results"><p id="demo"></p></div>
+        <div class="score">
+            <div class="playerscore"><p>Player Score</p><p id="pscore"></p></div>
+            <div class="computerscore"><p>Computer Score</p><p id="cscore"></p></div>
+        </div>
+    </div>      
     <script src="script.js"></script>    
 </body>
 </html>

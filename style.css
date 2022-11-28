@@ -1,0 +1,65 @@
+h1, h3, .choices, .results, .score {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(56, 31, 131);;
+}
+
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 54px;
+    color: rgb(56, 31, 131);
+ 
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    color: rgb(56, 31, 131);
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    color: rgb(56, 31, 131);;
+}
+  
+button#rock {
+    background: url(./roche.png) no-repeat;
+    background-size: cover;
+    border: none;
+    width: 200px;
+    height: 200px;
+}
+
+button#paper {
+    background: url(./papier.png) no-repeat;
+    background-size: cover;
+    border: none;
+    width: 200px;
+    height: 200px;
+}
+
+button#scissors {
+    background: url(./ciseaux.png) no-repeat;
+    background-size: cover;
+    border: none;
+    width: 200px;
+    height: 200px;
+}
+
+button:hover {
+    transition: transform .2s; /* Animation */
+    transform: scale(1.3);
+}
+
+.content {
+    background-color: rgb(249, 236, 219);
+    padding: 30px;
+    margin: 40px;
+}
+
+#demo {
+    color: brown;
+}
